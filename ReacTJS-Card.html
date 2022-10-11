@@ -1,0 +1,176 @@
+<html>
+
+<head>
+    <title>Tugas #1 - ReactJS</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <style>
+        .card {
+            width: 30%;
+            padding: 10px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 10px;
+            margin-top: 100;
+            box-shadow: 0px 2px 2px red;
+        }
+
+        .s {
+            color: blue;
+        }
+
+        .e {
+            color: red;
+        }
+
+        .l {
+            color: yellow;
+        }
+
+        .a {
+            color: blue;
+        }
+
+        .m {
+            color: green;
+        }
+
+        .aa {
+            color: red;
+        }
+
+        .t {
+            color: blue;
+        }
+
+        .d {
+            color: red;
+        }
+
+        .aaa {
+            color: yellow;
+        }
+
+        .tt {
+            color: blue;
+        }
+
+        .aaaa {
+            color: green;
+        }
+
+        .n {
+            color: red;
+        }
+
+        .g {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+    <div id="app"></div>
+
+
+    <script type="text/babel">
+        function Header() {
+            return (
+                <nav class="navbar navbar-expand-lg bg-warning p-4">
+                    <a id="head" class="navbar-brand">Belajar ReactJS</a>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto me-5">
+                            <a id="home" class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a id="profil" class="nav-link active" aria-current="page" href="#">Profil</a>
+                        </div>
+                    </div>
+                </nav>
+            )
+        }
+        // ReactDOM.render(<Header />, document.getElementById("head"));
+
+
+        function Sd() {
+            return (
+                <div class="bg-dark p-5">
+                    <h2 class="text-light text-center">
+                        <span class="s">S</span>
+                        <span class="e">E</span>
+                        <span class="l">L</span>
+                        <span class="a">A</span>
+                        <span class="m">M</span>
+                        <span class="aa">A</span>
+                        <span class="t">T  </span>
+
+                        <span class="d">D</span>
+                        <span class="aaa">A</span>
+                        <span class="tt">T</span>
+                        <span class="aaaa">A</span>
+                        <span class="n">N</span>
+                        <span class="g">G  </span>
+
+                        <span class="s">D</span>
+                        <span class="e">I  </span>
+
+                        <span class="l">W</span>
+                        <span class="a">E</span>
+                        <span class="m">B</span>
+                        <span class="aa">S</span>
+                        <span class="t">I</span>
+                        <span class="s">T</span>
+                        <span class="e">E  </span>
+
+                        <span class="l">S</span>
+                        <span class="a">A</span>
+                        <span class="m">Y</span>
+                        <span class="aa">A</span>
+                    </h2>
+                </div>
+            )
+        }
+        // ReactDOM.render(<Sd />, document.getElementById("welcome"));
+
+        const Card = (props) => {
+            return (
+                <div class="card m-3 text-center">
+                    <p class="title">{props.nama}</p>
+                    <p>{props.job}</p>
+                </div>
+            )
+        }
+
+        const Konten = () => {
+            return (
+                <div class="container bg-warning p-5">
+                    <Card nama='Akbar Dhia Satria, S.T, M.T' job='Backend Developer' />
+                    <Card nama='Rudio Winaldo, S.T, M.T' job='Frontend Developer' />
+                    <Card nama='David Gunawan, S.T, M.T' job='Backend Developer' />
+                    <Card nama='M.Fariz Al-Haq, S.T, M.T' job='Frontend Developer' />
+                    <Card nama='Albarru Sah Zihad, S.T, M.T' job='Backend Developer' />
+                    <Card nama='Iqbal Alfarisi A.P, S.T, M.T' job='Frontend Developer' />
+                </div>
+            )
+        }
+
+        const App = () => {
+            return (
+                <div>
+                    <Header />
+                    <Sd />
+                    <Konten />
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById("app"));
+    </script>
+</body>
+
+</html>
